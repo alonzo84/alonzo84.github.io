@@ -68,24 +68,34 @@
 	// <li><a href="https://drive.google.com/drive/folders/1jIMjQ5MPuMZCV-bCKv-s7bVE2FMArg9q?usp=share_link">Audiencia</a></li>
 
     function puntoDentroDelPoligono(poligono, coordenada) {
-      function puntoDentroDelPoligono(poligono, coordenada) {
   var dentro = false;
-  var coordenadaX = coordenada[0], coordenadaY = coordenada[1];
+  var coordenadaX = redondearDecimal(coordenada[0], 6); // Redondear a 6 decimales
+  var coordenadaY = redondearDecimal(coordenada[1], 6); // Redondear a 6 decimales
 
   for (var i = 0, j = poligono.length - 1; i < poligono.length; j = i++) {
-    var coordenadaI = poligono[i], coordenadaJ = poligono[j];
-    var xi = coordenadaI[0], yi = coordenadaI[1];
-    var xj = coordenadaJ[0], yj = coordenadaJ[1];
+    var coordenadaI = poligono[i];
+    var coordenadaJ = poligono[j];
+    var xi = redondearDecimal(coordenadaI[0], 6); // Redondear a 6 decimales
+    var yi = redondearDecimal(coordenadaI[1], 6); // Redondear a 6 decimales
+    var xj = redondearDecimal(coordenadaJ[0], 6); // Redondear a 6 decimales
+    var yj = redondearDecimal(coordenadaJ[1], 6); // Redondear a 6 decimales
 
     var intersecta = ((yi > coordenadaY) !== (yj > coordenadaY)) &&
                      (coordenadaX < (xj - xi) * (coordenadaY - yi) / (yj - yi) + xi);
 
-    if (intersecta) dentro = !dentro;
+    if (intersecta) {
+      dentro = !dentro;
+    }
   }
 
   return dentro;
 }
-    }
+
+function redondearDecimal(numero, decimales) {
+  var factor = Math.pow(10, decimales);
+  return Math.round(numero * factor) / factor;
+}
+
   </script>
 </main>
 </body>
