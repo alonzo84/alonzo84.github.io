@@ -1,0 +1,618 @@
+Reporte de Encuesta por Secciones
+Fecha: 2025-07-11
+
+Introducción
+-----------
+Este reporte presenta los resultados de una encuesta electoral por secciones. Cada fila en los datos representa una entrevista individual, con las siguientes definiciones:
+- Entrevista: Opinión de un encuestado (apoyo o rechazo a un candidato).
+- Sección: Identificador de la sección electoral donde se realizó la entrevista.
+- Lista Nominal: Número de votantes registrados en la sección.
+- Peso: Proporción derivada de la lista nominal (Lista Nominal / Total Global).
+- Total de Entrevistas: Número de entrevistas realizadas (filas en el archivo).
+- Total Ponderado: Suma de los pesos de las entrevistas, representando el apoyo o rechazo ajustado.
+- Secciones Únicas: Número de secciones distintas con entrevistas.
+- Consolidación: Diferencia entre entrevistas de apoyo y rechazo (en número y peso).
+Nota: Secciones con múltiples entrevistas contribuyen más al total ponderado debido al muestreo adicional. Los resultados son estimaciones basadas en una muestra pequeña (1-3 encuestados por sección).
+
+Resultados por Par de Candidatos
+-------------------------------
+
+Par 10: Armando_Ayala vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Armando_Ayala
+Entrevistas de Apoyo a Armando_Ayala
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+772.0       970            0.000660    
+812.0       680            0.000463    
+1244.0      2,369          0.001613    
+1755.0      512            0.000349    
+2009.0      868            0.000591    
+2059.0      1,250          0.000851    
+
+
+Total de Entrevistas: 6
+Secciones Únicas: 6
+Total Ponderado: 0.004526
+
+Entrevistas de Rechazo a Armando_Ayala
+Entrevistas de Rechazo a Armando_Ayala
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+800.0       1,787          0.001216    
+808.0       1,120          0.000762    
+917.0       995            0.000677    
+922.0       996            0.000678    
+962.0       1,231          0.000838    
+996.0       1,285          0.000875    
+1082.0      907            0.000617    
+1223.0      1,564          0.001065    
+1248.0      1,264          0.000860    
+1700.0      580            0.000395    
+
+
+Total de Entrevistas: 10
+Secciones Únicas: 10
+Total Ponderado: 0.007984
+
+Consolidación
+Total de Entrevistas Neto: -4
+Total Ponderado Neto: -0.003458
+
+------------------------------
+
+Par 1: Carlos_Torres vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Carlos_Torres
+Entrevistas de Apoyo a Carlos_Torres
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+796.0       1,125          0.000766    
+834.0       1,665          0.001133    
+953.0       1,027          0.000699    
+953.0       1,027          0.000699    
+962.0       1,231          0.000838    
+1074.0      1,188          0.000809    
+1394.0      952            0.000648    
+1484.0      2,828          0.001925    
+1700.0      580            0.000395    
+1700.0      580            0.000395    
+1785.0      1,159          0.000789    
+2001.0      1,747          0.001189    
+
+
+Total de Entrevistas: 12
+Secciones Únicas: 10
+Total Ponderado: 0.010284
+
+Entrevistas de Rechazo a Carlos_Torres
+Entrevistas de Rechazo a Carlos_Torres
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+741.0       1,293          0.000880    
+741.0       1,293          0.000880    
+772.0       970            0.000660    
+800.0       1,787          0.001216    
+823.0       945            0.000643    
+858.0       8,539          0.005812    
+871.0       843            0.000574    
+902.0       1,377          0.000937    
+917.0       995            0.000677    
+929.0       646            0.000440    
+931.0       1,236          0.000841    
+972.0       3,352          0.002282    
+998.0       1,178          0.000802    
+1001.0      1,549          0.001054    
+1026.0      859            0.000585    
+1028.0      801            0.000545    
+1058.0      1,307          0.000890    
+1087.0      761            0.000518    
+1096.0      1,297          0.000883    
+1100.0      1,602          0.001090    
+1102.0      1,347          0.000917    
+1118.0      1,313          0.000894    
+1138.0      1,665          0.001133    
+1155.0      4,017          0.002734    
+1158.0      3,447          0.002346    
+1171.0      2,674          0.001820    
+1178.0      1,257          0.000856    
+1183.0      2,170          0.001477    
+1193.0      1,203          0.000819    
+1219.0      1,948          0.001326    
+1219.0      1,948          0.001326    
+1220.0      1,804          0.001228    
+1220.0      1,804          0.001228    
+1228.0      1,492          0.001016    
+1228.0      1,492          0.001016    
+1231.0      10,653         0.007251    
+1243.0      996            0.000678    
+1243.0      996            0.000678    
+1248.0      1,264          0.000860    
+1303.0      1,097          0.000747    
+1341.0      1,322          0.000900    
+1341.0      1,322          0.000900    
+1387.0      1,082          0.000736    
+1392.0      819            0.000557    
+1434.0      1,488          0.001013    
+1438.0      1,064          0.000724    
+1438.0      1,064          0.000724    
+1449.0      1,400          0.000953    
+1454.0      997            0.000679    
+1461.0      895            0.000609    
+1461.0      895            0.000609    
+1461.0      895            0.000609    
+1544.0      731            0.000498    
+1558.0      819            0.000557    
+1595.0      1,059          0.000721    
+1632.0      1,834          0.001248    
+1695.0      924            0.000629    
+1769.0      567            0.000386    
+2001.0      1,747          0.001189    
+2139.0      1,250          0.000851    
+
+
+Total de Entrevistas: 60
+Secciones Únicas: 51
+Total Ponderado: 0.067653
+
+Consolidación
+Total de Entrevistas Neto: -48
+Total Ponderado Neto: -0.057369
+
+------------------------------
+
+Par 2: Evangelina_Moreno vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Evangelina_Moreno
+Entrevistas de Apoyo a Evangelina_Moreno
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+797.0       2,202          0.001499    
+800.0       1,787          0.001216    
+998.0       1,178          0.000802    
+1020.0      784            0.000534    
+1055.0      913            0.000621    
+1071.0      1,620          0.001103    
+1087.0      761            0.000518    
+1087.0      761            0.000518    
+1105.0      1,274          0.000867    
+1135.0      1,517          0.001033    
+1175.0      3,533          0.002405    
+1219.0      1,948          0.001326    
+1228.0      1,492          0.001016    
+1256.0      1,552          0.001056    
+1307.0      797            0.000543    
+1316.0      872            0.000594    
+1341.0      1,322          0.000900    
+1341.0      1,322          0.000900    
+1438.0      1,064          0.000724    
+1454.0      997            0.000679    
+1461.0      895            0.000609    
+1461.0      895            0.000609    
+1464.0      717            0.000488    
+1525.0      1,322          0.000900    
+1631.0      1,223          0.000832    
+1632.0      1,834          0.001248    
+1695.0      924            0.000629    
+1705.0      652            0.000444    
+
+
+Total de Entrevistas: 28
+Secciones Únicas: 25
+Total Ponderado: 0.024612
+
+Entrevistas de Rechazo a Evangelina_Moreno
+Entrevistas de Rechazo a Evangelina_Moreno
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+812.0       680            0.000463    
+851.0       1,655          0.001127    
+947.0       1,229          0.000837    
+985.0       1,099          0.000748    
+1316.0      872            0.000594    
+
+
+Total de Entrevistas: 5
+Secciones Únicas: 5
+Total Ponderado: 0.003768
+
+Consolidación
+Total de Entrevistas Neto: 23
+Total Ponderado Neto: 0.020844
+
+------------------------------
+
+Par 3: Alejandro_Ruiz vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Alejandro_Ruiz
+Entrevistas de Apoyo a Alejandro_Ruiz
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+800.0       1,787          0.001216    
+823.0       945            0.000643    
+959.0       919            0.000626    
+972.0       3,352          0.002282    
+1058.0      1,307          0.000890    
+1096.0      1,297          0.000883    
+1097.0      4,076          0.002774    
+1414.0      1,272          0.000866    
+1425.0      1,499          0.001020    
+1461.0      895            0.000609    
+1477.0      797            0.000543    
+1632.0      1,834          0.001248    
+1931.0      404            0.000275    
+
+
+Total de Entrevistas: 13
+Secciones Únicas: 13
+Total Ponderado: 0.013875
+
+Entrevistas de Rechazo a Alejandro_Ruiz
+Entrevistas de Rechazo a Alejandro_Ruiz
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+1001.0      1,549          0.001054    
+1333.0      764            0.000520    
+1490.0      1,387          0.000944    
+
+
+Total de Entrevistas: 3
+Secciones Únicas: 3
+Total Ponderado: 0.002519
+
+Consolidación
+Total de Entrevistas Neto: 10
+Total Ponderado Neto: 0.011356
+
+------------------------------
+
+Par 4: Ismael_Burgueno vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Ismael_Burgueno
+Entrevistas de Apoyo a Ismael_Burgueno
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+770.0       586            0.000399    
+798.0       3,233          0.002201    
+812.0       680            0.000463    
+834.0       1,665          0.001133    
+843.0       4,605          0.003135    
+851.0       1,655          0.001127    
+854.0       5,403          0.003678    
+917.0       995            0.000677    
+930.0       1,823          0.001241    
+931.0       1,236          0.000841    
+962.0       1,231          0.000838    
+985.0       1,099          0.000748    
+985.0       1,099          0.000748    
+999.0       2,345          0.001596    
+1001.0      1,549          0.001054    
+1007.0      981            0.000668    
+1014.0      923            0.000628    
+1026.0      859            0.000585    
+1058.0      1,307          0.000890    
+1071.0      1,620          0.001103    
+1082.0      907            0.000617    
+1109.0      1,290          0.000878    
+1119.0      3,634          0.002474    
+1128.0      5,468          0.003722    
+1129.0      1,519          0.001034    
+1129.0      1,519          0.001034    
+1151.0      4,004          0.002725    
+1153.0      8,428          0.005737    
+1154.0      2,329          0.001585    
+1204.0      1,988          0.001353    
+1204.0      1,988          0.001353    
+1212.0      2,021          0.001376    
+1231.0      10,653         0.007251    
+1243.0      996            0.000678    
+1243.0      996            0.000678    
+1243.0      996            0.000678    
+1324.0      1,320          0.000898    
+1333.0      764            0.000520    
+1359.0      1,468          0.000999    
+1374.0      1,140          0.000776    
+1378.0      607            0.000413    
+1394.0      952            0.000648    
+1414.0      1,272          0.000866    
+1438.0      1,064          0.000724    
+1477.0      797            0.000543    
+1484.0      2,828          0.001925    
+1489.0      758            0.000516    
+1607.0      683            0.000465    
+1688.0      822            0.000560    
+1738.0      2,290          0.001559    
+
+
+Total de Entrevistas: 50
+Secciones Únicas: 45
+Total Ponderado: 0.068337
+
+Entrevistas de Rechazo a Ismael_Burgueno
+Entrevistas de Rechazo a Ismael_Burgueno
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+796.0       1,125          0.000766    
+796.0       1,125          0.000766    
+797.0       2,202          0.001499    
+816.0       776            0.000528    
+871.0       843            0.000574    
+886.0       1,001          0.000681    
+942.0       1,968          0.001340    
+998.0       1,178          0.000802    
+1071.0      1,620          0.001103    
+1082.0      907            0.000617    
+1087.0      761            0.000518    
+1128.0      5,468          0.003722    
+1135.0      1,517          0.001033    
+1254.0      2,217          0.001509    
+1287.0      2,892          0.001969    
+1307.0      797            0.000543    
+1489.0      758            0.000516    
+1489.0      758            0.000516    
+1505.0      1,061          0.000722    
+1525.0      1,322          0.000900    
+2009.0      868            0.000591    
+
+
+Total de Entrevistas: 21
+Secciones Únicas: 19
+Total Ponderado: 0.021213
+
+Consolidación
+Total de Entrevistas Neto: 29
+Total Ponderado Neto: 0.047124
+
+------------------------------
+
+Par 5: Julieta_Ramirez vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Julieta_Ramirez
+Entrevistas de Apoyo a Julieta_Ramirez
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+741.0       1,293          0.000880    
+741.0       1,293          0.000880    
+800.0       1,787          0.001216    
+831.0       2,156          0.001468    
+839.0       783            0.000533    
+886.0       1,001          0.000681    
+902.0       1,377          0.000937    
+1119.0      3,634          0.002474    
+1125.0      8,839          0.006017    
+1143.0      3,373          0.002296    
+1158.0      3,447          0.002346    
+1171.0      2,674          0.001820    
+1193.0      1,203          0.000819    
+1248.0      1,264          0.000860    
+1276.0      2,584          0.001759    
+1325.0      936            0.000637    
+1336.0      6,100          0.004152    
+1359.0      1,468          0.000999    
+1425.0      1,499          0.001020    
+1434.0      1,488          0.001013    
+1477.0      797            0.000543    
+1483.0      825            0.000562    
+1761.0      913            0.000621    
+1769.0      567            0.000386    
+2016.0      2,027          0.001380    
+
+
+Total de Entrevistas: 25
+Secciones Únicas: 24
+Total Ponderado: 0.036299
+
+Entrevistas de Rechazo a Julieta_Ramirez
+Entrevistas de Rechazo a Julieta_Ramirez
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+951.0       1,210          0.000824    
+
+
+Total de Entrevistas: 1
+Secciones Únicas: 1
+Total Ponderado: 0.000824
+
+Consolidación
+Total de Entrevistas Neto: 24
+Total Ponderado Neto: 0.035476
+
+------------------------------
+
+Par 7: Gilberto_Herrera vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Gilberto_Herrera
+Entrevistas de Apoyo a Gilberto_Herrera
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+796.0       1,125          0.000766    
+930.0       1,823          0.001241    
+997.0       527            0.000359    
+1100.0      1,602          0.001090    
+1121.0      1,765          0.001201    
+1155.0      4,017          0.002734    
+1303.0      1,097          0.000747    
+1325.0      936            0.000637    
+1387.0      1,082          0.000736    
+1489.0      758            0.000516    
+1538.0      944            0.000643    
+1544.0      731            0.000498    
+2001.0      1,747          0.001189    
+2039.0      1,306          0.000889    
+
+
+Total de Entrevistas: 14
+Secciones Únicas: 14
+Total Ponderado: 0.013246
+
+Entrevistas de Rechazo a Gilberto_Herrera
+Entrevistas de Rechazo a Gilberto_Herrera
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+831.0       2,156          0.001468    
+1359.0      1,468          0.000999    
+
+
+Total de Entrevistas: 2
+Secciones Únicas: 2
+Total Ponderado: 0.002467
+
+Consolidación
+Total de Entrevistas Neto: 12
+Total Ponderado Neto: 0.010779
+
+------------------------------
+
+Par 8: Monserrat_Caballero vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Monserrat_Caballero
+Entrevistas de Apoyo a Monserrat_Caballero
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+808.0       1,120          0.000762    
+816.0       776            0.000528    
+831.0       2,156          0.001468    
+843.0       4,605          0.003135    
+854.0       5,403          0.003678    
+854.0       5,403          0.003678    
+858.0       8,539          0.005812    
+871.0       843            0.000574    
+922.0       996            0.000678    
+947.0       1,229          0.000837    
+957.0       1,623          0.001105    
+962.0       1,231          0.000838    
+1001.0      1,549          0.001054    
+1046.0      899            0.000612    
+1100.0      1,602          0.001090    
+1102.0      1,347          0.000917    
+1138.0      1,665          0.001133    
+1169.0      3,591          0.002444    
+1175.0      3,533          0.002405    
+1244.0      2,369          0.001613    
+1248.0      1,264          0.000860    
+1254.0      2,217          0.001509    
+1392.0      819            0.000557    
+1595.0      1,059          0.000721    
+1764.0      720            0.000490    
+1790.0      2,332          0.001587    
+1800.0      4,651          0.003166    
+1898.0      683            0.000465    
+2009.0      868            0.000591    
+2039.0      1,306          0.000889    
+
+
+Total de Entrevistas: 30
+Secciones Únicas: 29
+Total Ponderado: 0.045196
+
+Entrevistas de Rechazo a Monserrat_Caballero
+Entrevistas de Rechazo a Monserrat_Caballero
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+808.0       1,120          0.000762    
+834.0       1,665          0.001133    
+843.0       4,605          0.003135    
+916.0       873            0.000594    
+930.0       1,823          0.001241    
+953.0       1,027          0.000699    
+959.0       919            0.000626    
+985.0       1,099          0.000748    
+1058.0      1,307          0.000890    
+1071.0      1,620          0.001103    
+1072.0      1,188          0.000809    
+1095.0      1,412          0.000961    
+1105.0      1,274          0.000867    
+1119.0      3,634          0.002474    
+1121.0      1,765          0.001201    
+1129.0      1,519          0.001034    
+1129.0      1,519          0.001034    
+1204.0      1,988          0.001353    
+1243.0      996            0.000678    
+1324.0      1,320          0.000898    
+1336.0      6,100          0.004152    
+1392.0      819            0.000557    
+1394.0      952            0.000648    
+1469.0      798            0.000543    
+1484.0      2,828          0.001925    
+1607.0      683            0.000465    
+1688.0      822            0.000560    
+1874.0      525            0.000357    
+2003.0      2,104          0.001432    
+2016.0      2,027          0.001380    
+
+
+Total de Entrevistas: 30
+Secciones Únicas: 29
+Total Ponderado: 0.034259
+
+Consolidación
+Total de Entrevistas Neto: 0
+Total Ponderado Neto: 0.010936
+
+------------------------------
+
+Par 9: Norma_Bustamante vs. Rechazo
+==============================
+
+Entrevistas de Apoyo a Norma_Bustamante
+Entrevistas de Apoyo a Norma_Bustamante
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+942.0       1,968          0.001340    
+1028.0      801            0.000545    
+1160.0      1,319          0.000898    
+
+
+Total de Entrevistas: 3
+Secciones Únicas: 3
+Total Ponderado: 0.002783
+
+Entrevistas de Rechazo a Norma_Bustamante
+Entrevistas de Rechazo a Norma_Bustamante
+
+Sección     Lista Nominal  Peso        
+------------ -------------- ------------
+834.0       1,665          0.001133    
+854.0       5,403          0.003678    
+854.0       5,403          0.003678    
+1074.0      1,188          0.000809    
+1109.0      1,290          0.000878    
+1631.0      1,223          0.000832    
+1632.0      1,834          0.001248    
+2059.0      1,250          0.000851    
+
+
+Total de Entrevistas: 8
+Secciones Únicas: 7
+Total Ponderado: 0.013107
+
+Consolidación
+Total de Entrevistas Neto: -5
+Total Ponderado Neto: -0.010325
+
+------------------------------

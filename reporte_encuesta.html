@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Encuesta por Secciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .toc {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc ul li {
+            margin: 5px 0;
+        }
+        .toc ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .toc ul li a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+        .map-links {
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Reporte de Encuesta por Secciones</h1>
+    <p><strong>Fecha:</strong> 2025-07-14</p>
+
+    <nav>
+        <ul>
+            <li><a href="pie_charts.html">Gráficas de la Gubernatura</a></li>
+            <li><a href="alcaldia/reporte_encuesta_Alcaldia.html">Reporte de Encuesta de Alcaldía</a></li>
+            <li><a href="alcaldia/pie_charts.html">Gráficas de Alcaldía</a></li>
+        </ul>
+    </nav>
+
+    <div class="toc">
+        <h3>Tabla de Contenidos</h3>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#resultados">Resultados por Par de Candidatos</a></li>
+            <li><a href="#par10">Par 10: Armando Ayala</a></li>
+            <li><a href="#par1">Par 1: Carlos Torres</a></li>
+            <li><a href="#par2">Par 2: Evangelina Moreno</a></li>
+            <li><a href="#par3">Par 3: Alejandro Ruiz</a></li>
+            <li><a href="#par4">Par 4: Ismael Burgueño</a></li>
+            <li><a href="#par5">Par 5: Julieta Ramírez</a></li>
+            <li><a href="#par7">Par 7: Gilberto Herrera</a></li>
+            <li><a href="#par8">Par 8: Monserrat Caballero</a></li>
+            <li><a href="#par9">Par 9: Norma Bustamante</a></li>
+            <li><a href="#mapas">Mapas por Candidato/Categoría</a></li>
+        </ul>
+    </div>
+
+    <p>Esta encuesta electoral en Tijuana recopiló 310 entrevistas distribuidas aleatoriamente en hasta 210 secciones electorales, con 1 a 3 entrevistas por sección, para evaluar el apoyo y rechazo a candidatos a la gubernatura, incluyendo Armando Ayala, Carlos Torres, Evangelina Moreno, Alejandro Ruiz, Ismael Burgueño, Julieta Ramírez, Gilberto Herrera, Monserrat Caballero, Norma Bustamante, Fernando Castro, y las categorías "Empty Voto" y "Ninguno". El reporte presenta resultados en <a href="reporte_encuesta.html">reporte_encuesta.html</a> (tablas detalladas), <a href="pie_charts.html">pie_charts.html</a> (gráficos de pastel), y mapas interactivos en <a href="Reporte_Output">Reporte_Output</a> que muestran apoyo (verde), rechazo (rojo) y votos nulos (gris), con tamaños de puntos proporcionales al peso de cada sección (lista nominal dividida por el total global). Con 310 entrevistas y una población estimada de 1,468,997 votantes, el margen de error es de ±5.6% a un nivel de confianza del 95% (por ejemplo, el 4.52% de apoyo ponderado de Monserrat Caballero tiene un intervalo de 4.52% ± 5.6%). Un error menor en el flujo de trabajo excluyó a Fernando Castro de reporte_consolidado.csv, pero sus datos de rechazo están incluidos en los mapas, asegurando su representación en el análisis visual.</p>
+
+    <p>Las fortalezas de este método incluyen su enfoque granular por sección, que captura patrones geográficos, y el uso de pesos para reflejar la representatividad de las secciones, con visualizaciones interactivas que facilitan la interpretación. Sin embargo, la muestra pequeña (310 entrevistas) genera un margen de error elevado, y el muestreo de 1-3 entrevistas por sección puede no capturar la variabilidad en secciones grandes. Advertencias incluyen la posible falta de representatividad en secciones con pocas entrevistas, el error de omisión de Fernando Castro en el consolidado (corregido en los mapas), y la dependencia en datos precisos de lista nominal. Dadas las limitaciones de tiempo, el reporte se entrega con esta corrección parcial, pero los resultados deben interpretarse como estimaciones preliminares, especialmente para proyecciones municipales.</p>
+
+    <h2 id="introduccion">Introducción</h2>
+    <p>Este reporte presenta los resultados de una encuesta electoral por secciones. Cada fila en los datos representa una entrevista individual, con las siguientes definiciones:</p>
+    <ul>
+        <li><strong>Entrevista</strong>: Opinión de un encuestado (apoyo o rechazo a un candidato).</li>
+        <li><strong>Sección</strong>: Identificador de la sección electoral donde se realizó la entrevista.</li>
+        <li><strong>Lista Nominal</strong>: Número de votantes registrados en la sección.</li>
+        <li><strong>Peso</strong>: Proporción derivada de la lista nominal (Lista Nominal / Total Global).</li>
+        <li><strong>Total de Entrevistas</strong>: Número de entrevistas realizadas (filas en el archivo).</li>
+        <li><strong>Total Ponderado</strong>: Suma de los pesos de las entrevistas, representando el apoyo o rechazo ajustado.</li>
+        <li><strong>Secciones Únicas</strong>: Número de secciones distintas con entrevistas.</li>
+        <li><strong>Consolidación</strong>: Diferencia entre entrevistas de apoyo y rechazo (en número y peso).</li>
+    </ul>
+    <p><strong>Nota</strong>: Secciones con múltiples entrevistas contribuyen más al total ponderado debido al muestreo adicional. Los resultados son estimaciones basadas en una muestra pequeña (1-3 encuestados por sección).</p>
+
+    <h2 id="resultados">Resultados por Par de Candidatos</h2>
+
+    <h3 id="par10">Par 10: Armando Ayala vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Armando Ayala</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>772.0</td><td>970</td><td>0.000660</td></tr>
+        <tr><td>812.0</td><td>680</td><td>0.000463</td></tr>
+        <tr><td>1244.0</td><td>2,369</td><td>0.001613</td></tr>
+        <tr><td>1755.0</td><td>512</td><td>0.000349</td></tr>
+        <tr><td>2009.0</td><td>868</td><td>0.000591</td></tr>
+        <tr><td>2059.0</td><td>1,250</td><td>0.000851</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 6</li>
+        <li><strong>Secciones Únicas</strong>: 6</li>
+        <li><strong>Total Ponderado</strong>: 0.004526</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Armando Ayala</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>800.0</td><td>1,787</td><td>0.001216</td></tr>
+        <tr><td>808.0</td><td>1,120</td><td>0.000762</td></tr>
+        <tr><td>917.0</td><td>995</td><td>0.000677</td></tr>
+        <tr><td>922.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>962.0</td><td>1,231</td><td>0.000838</td></tr>
+        <tr><td>996.0</td><td>1,285</td><td>0.000875</td></tr>
+        <tr><td>1082.0</td><td>907</td><td>0.000617</td></tr>
+        <tr><td>1223.0</td><td>1,564</td><td>0.001065</td></tr>
+        <tr><td>1248.0</td><td>1,264</td><td>0.000860</td></tr>
+        <tr><td>1700.0</td><td>580</td><td>0.000395</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 10</li>
+        <li><strong>Secciones Únicas</strong>: 10</li>
+        <li><strong>Total Ponderado</strong>: 0.007984</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: -4</li>
+        <li><strong>Total Ponderado Neto</strong>: -0.003458</li>
+    </ul>
+    <hr>
+
+    <h3 id="par1">Par 1: Carlos Torres vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Carlos Torres</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>796.0</td><td>1,125</td><td>0.000766</td></tr>
+        <tr><td>834.0</td><td>1,665</td><td>0.001133</td></tr>
+        <tr><td>953.0</td><td>1,027</td><td>0.000699</td></tr>
+        <tr><td>953.0</td><td>1,027</td><td>0.000699</td></tr>
+        <tr><td>962.0</td><td>1,231</td><td>0.000838</td></tr>
+        <tr><td>1074.0</td><td>1,188</td><td>0.000809</td></tr>
+        <tr><td>1394.0</td><td>952</td><td>0.000648</td></tr>
+        <tr><td>1484.0</td><td>2,828</td><td>0.001925</td></tr>
+        <tr><td>1700.0</td><td>580</td><td>0.000395</td></tr>
+        <tr><td>1700.0</td><td>580</td><td>0.000395</td></tr>
+        <tr><td>1785.0</td><td>1,159</td><td>0.000789</td></tr>
+        <tr><td>2001.0</td><td>1,747</td><td>0.001189</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 12</li>
+        <li><strong>Secciones Únicas</strong>: 10</li>
+        <li><strong>Total Ponderado</strong>: 0.010284</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Carlos Torres</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>741.0</td><td>1,293</td><td>0.000880</td></tr>
+        <tr><td>741.0</td><td>1,293</td><td>0.000880</td></tr>
+        <tr><td>772.0</td><td>970</td><td>0.000660</td></tr>
+        <tr><td>800.0</td><td>1,787</td><td>0.001216</td></tr>
+        <tr><td>823.0</td><td>945</td><td>0.000643</td></tr>
+        <tr><td>858.0</td><td>8,539</td><td>0.005812</td></tr>
+        <tr><td>871.0</td><td>843</td><td>0.000574</td></tr>
+        <tr><td>902.0</td><td>1,377</td><td>0.000937</td></tr>
+        <tr><td>917.0</td><td>995</td><td>0.000677</td></tr>
+        <tr><td>929.0</td><td>646</td><td>0.000440</td></tr>
+        <tr><td>931.0</td><td>1,236</td><td>0.000841</td></tr>
+        <tr><td>972.0</td><td>3,352</td><td>0.002282</td></tr>
+        <tr><td>998.0</td><td>1,178</td><td>0.000802</td></tr>
+        <tr><td>1001.0</td><td>1,549</td><td>0.001054</td></tr>
+        <tr><td>1026.0</td><td>859</td><td>0.000585</td></tr>
+        <tr><td>1028.0</td><td>801</td><td>0.000545</td></tr>
+        <tr><td>1058.0</td><td>1,307</td><td>0.000890</td></tr>
+        <tr><td>1087.0</td><td>761</td><td>0.000518</td></tr>
+        <tr><td>1096.0</td><td>1,297</td><td>0.000883</td></tr>
+        <tr><td>1100.0</td><td>1,602</td><td>0.001090</td></tr>
+        <tr><td>1102.0</td><td>1,347</td><td>0.000917</td></tr>
+        <tr><td>1118.0</td><td>1,313</td><td>0.000894</td></tr>
+        <tr><td>1138.0</td><td>1,665</td><td>0.001133</td></tr>
+        <tr><td>1155.0</td><td>4,017</td><td>0.002734</td></tr>
+        <tr><td>1158.0</td><td>3,447</td><td>0.002346</td></tr>
+        <tr><td>1171.0</td><td>2,674</td><td>0.001820</td></tr>
+        <tr><td>1178.0</td><td>1,257</td><td>0.000856</td></tr>
+        <tr><td>1183.0</td><td>2,170</td><td>0.001477</td></tr>
+        <tr><td>1193.0</td><td>1,203</td><td>0.000819</td></tr>
+        <tr><td>1219.0</td><td>1,948</td><td>0.001326</td></tr>
+        <tr><td>1219.0</td><td>1,948</td><td>0.001326</td></tr>
+        <tr><td>1220.0</td><td>1,804</td><td>0.001228</td></tr>
+        <tr><td>1220.0</td><td>1,804</td><td>0.001228</td></tr>
+        <tr><td>1228.0</td><td>1,492</td><td>0.001016</td></tr>
+        <tr><td>1228.0</td><td>1,492</td><td>0.001016</td></tr>
+        <tr><td>1231.0</td><td>10,653</td><td>0.007251</td></tr>
+        <tr><td>1243.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>1243.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>1248.0</td><td>1,264</td><td>0.000860</td></tr>
+        <tr><td>1303.0</td><td>1,097</td><td>0.000747</td></tr>
+        <tr><td>1341.0</td><td>1,322</td><td>0.000900</td></tr>
+        <tr><td>1341.0</td><td>1,322</td><td>0.000900</td></tr>
+        <tr><td>1387.0</td><td>1,082</td><td>0.000736</td></tr>
+        <tr><td>1392.0</td><td>819</td><td>0.000557</td></tr>
+        <tr><td>1434.0</td><td>1,488</td><td>0.001013</td></tr>
+        <tr><td>1438.0</td><td>1,064</td><td>0.000724</td></tr>
+        <tr><td>1438.0</td><td>1,064</td><td>0.000724</td></tr>
+        <tr><td>1449.0</td><td>1,400</td><td>0.000953</td></tr>
+        <tr><td>1454.0</td><td>997</td><td>0.000679</td></tr>
+        <tr><td>1461.0</td><td>895</td><td>0.000609</td></tr>
+        <tr><td>1461.0</td><td>895</td><td>0.000609</td></tr>
+        <tr><td>1461.0</td><td>895</td><td>0.000609</td></tr>
+        <tr><td>1544.0</td><td>731</td><td>0.000498</td></tr>
+        <tr><td>1558.0</td><td>819</td><td>0.000557</td></tr>
+        <tr><td>1595.0</td><td>1,059</td><td>0.000721</td></tr>
+        <tr><td>1632.0</td><td>1,834</td><td>0.001248</td></tr>
+        <tr><td>1695.0</td><td>924</td><td>0.000629</td></tr>
+        <tr><td>1769.0</td><td>567</td><td>0.000386</td></tr>
+        <tr><td>2001.0</td><td>1,747</td><td>0.001189</td></tr>
+        <tr><td>2139.0</td><td>1,250</td><td>0.000851</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 60</li>
+        <li><strong>Secciones Únicas</strong>: 51</li>
+        <li><strong>Total Ponderado</strong>: 0.067653</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: -48</li>
+        <li><strong>Total Ponderado Neto</strong>: -0.057369</li>
+    </ul>
+    <hr>
+
+    <h3 id="par2">Par 2: Evangelina Moreno vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Evangelina Moreno</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>797.0</td><td>2,202</td><td>0.001499</td></tr>
+        <tr><td>800.0</td><td>1,787</td><td>0.001216</td></tr>
+        <tr><td>998.0</td><td>1,178</td><td>0.000802</td></tr>
+        <tr><td>1020.0</td><td>784</td><td>0.000534</td></tr>
+        <tr><td>1055.0</td><td>913</td><td>0.000621</td></tr>
+        <tr><td>1071.0</td><td>1,620</td><td>0.001103</td></tr>
+        <tr><td>1087.0</td><td>761</td><td>0.000518</td></tr>
+        <tr><td>1087.0</td><td>761</td><td>0.000518</td></tr>
+        <tr><td>1105.0</td><td>1,274</td><td>0.000867</td></tr>
+        <tr><td>1135.0</td><td>1,517</td><td>0.001033</td></tr>
+        <tr><td>1175.0</td><td>3,533</td><td>0.002405</td></tr>
+        <tr><td>1219.0</td><td>1,948</td><td>0.001326</td></tr>
+        <tr><td>1228.0</td><td>1,492</td><td>0.001016</td></tr>
+        <tr><td>1256.0</td><td>1,552</td><td>0.001056</td></tr>
+        <tr><td>1307.0</td><td>797</td><td>0.000543</td></tr>
+        <tr><td>1316.0</td><td>872</td><td>0.000594</td></tr>
+        <tr><td>1341.0</td><td>1,322</td><td>0.000900</td></tr>
+        <tr><td>1341.0</td><td>1,322</td><td>0.000900</td></tr>
+        <tr><td>1438.0</td><td>1,064</td><td>0.000724</td></tr>
+        <tr><td>1454.0</td><td>997</td><td>0.000679</td></tr>
+        <tr><td>1461.0</td><td>895</td><td>0.000609</td></tr>
+        <tr><td>1461.0</td><td>895</td><td>0.000609</td></tr>
+        <tr><td>1464.0</td><td>717</td><td>0.000488</td></tr>
+        <tr><td>1525.0</td><td>1,322</td><td>0.000900</td></tr>
+        <tr><td>1631.0</td><td>1,223</td><td>0.000832</td></tr>
+        <tr><td>1632.0</td><td>1,834</td><td>0.001248</td></tr>
+        <tr><td>1695.0</td><td>924</td><td>0.000629</td></tr>
+        <tr><td>1705.0</td><td>652</td><td>0.000444</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 28</li>
+        <li><strong>Secciones Únicas</strong>: 25</li>
+        <li><strong>Total Ponderado</strong>: 0.024612</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Evangelina Moreno</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>812.0</td><td>680</td><td>0.000463</td></tr>
+        <tr><td>851.0</td><td>1,655</td><td>0.001127</td></tr>
+        <tr><td>947.0</td><td>1,229</td><td>0.000837</td></tr>
+        <tr><td>985.0</td><td>1,099</td><td>0.000748</td></tr>
+        <tr><td>1316.0</td><td>872</td><td>0.000594</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 5</li>
+        <li><strong>Secciones Únicas</strong>: 5</li>
+        <li><strong>Total Ponderado</strong>: 0.003768</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: 23</li>
+        <li><strong>Total Ponderado Neto</strong>: 0.020844</li>
+    </ul>
+    <hr>
+
+    <h3 id="par3">Par 3: Alejandro Ruiz vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Alejandro Ruiz</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>800.0</td><td>1,787</td><td>0.001216</td></tr>
+        <tr><td>823.0</td><td>945</td><td>0.000643</td></tr>
+        <tr><td>959.0</td><td>919</td><td>0.000626</td></tr>
+        <tr><td>972.0</td><td>3,352</td><td>0.002282</td></tr>
+        <tr><td>1058.0</td><td>1,307</td><td>0.000890</td></tr>
+        <tr><td>1096.0</td><td>1,297</td><td>0.000883</td></tr>
+        <tr><td>1097.0</td><td>4,076</td><td>0.002774</td></tr>
+        <tr><td>1414.0</td><td>1,272</td><td>0.000866</td></tr>
+        <tr><td>1425.0</td><td>1,499</td><td>0.001020</td></tr>
+        <tr><td>1461.0</td><td>895</td><td>0.000609</td></tr>
+        <tr><td>1477.0</td><td>797</td><td>0.000543</td></tr>
+        <tr><td>1632.0</td><td>1,834</td><td>0.001248</td></tr>
+        <tr><td>1931.0</td><td>404</td><td>0.000275</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 13</li>
+        <li><strong>Secciones Únicas</strong>: 13</li>
+        <li><strong>Total Ponderado</strong>: 0.013875</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Alejandro Ruiz</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>1001.0</td><td>1,549</td><td>0.001054</td></tr>
+        <tr><td>1333.0</td><td>764</td><td>0.000520</td></tr>
+        <tr><td>1490.0</td><td>1,387</td><td>0.000944</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 3</li>
+        <li><strong>Secciones Únicas</strong>: 3</li>
+        <li><strong>Total Ponderado</strong>: 0.002519</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: 10</li>
+        <li><strong>Total Ponderado Neto</strong>: 0.011356</li>
+    </ul>
+    <hr>
+
+    <h3 id="par4">Par 4: Ismael Burgueño vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Ismael Burgueño</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>770.0</td><td>586</td><td>0.000399</td></tr>
+        <tr><td>798.0</td><td>3,233</td><td>0.002201</td></tr>
+        <tr><td>812.0</td><td>680</td><td>0.000463</td></tr>
+        <tr><td>834.0</td><td>1,665</td><td>0.001133</td></tr>
+        <tr><td>843.0</td><td>4,605</td><td>0.003135</td></tr>
+        <tr><td>851.0</td><td>1,655</td><td>0.001127</td></tr>
+        <tr><td>854.0</td><td>5,403</td><td>0.003678</td></tr>
+        <tr><td>917.0</td><td>995</td><td>0.000677</td></tr>
+        <tr><td>930.0</td><td>1,823</td><td>0.001241</td></tr>
+        <tr><td>931.0</td><td>1,236</td><td>0.000841</td></tr>
+        <tr><td>962.0</td><td>1,231</td><td>0.000838</td></tr>
+        <tr><td>985.0</td><td>1,099</td><td>0.000748</td></tr>
+        <tr><td>985.0</td><td>1,099</td><td>0.000748</td></tr>
+        <tr><td>999.0</td><td>2,345</td><td>0.001596</td></tr>
+        <tr><td>1001.0</td><td>1,549</td><td>0.001054</td></tr>
+        <tr><td>1007.0</td><td>981</td><td>0.000668</td></tr>
+        <tr><td>1014.0</td><td>923</td><td>0.000628</td></tr>
+        <tr><td>1026.0</td><td>859</td><td>0.000585</td></tr>
+        <tr><td>1058.0</td><td>1,307</td><td>0.000890</td></tr>
+        <tr><td>1071.0</td><td>1,620</td><td>0.001103</td></tr>
+        <tr><td>1082.0</td><td>907</td><td>0.000617</td></tr>
+        <tr><td>1109.0</td><td>1,290</td><td>0.000878</td></tr>
+        <tr><td>1119.0</td><td>3,634</td><td>0.002474</td></tr>
+        <tr><td>1128.0</td><td>5,468</td><td>0.003722</td></tr>
+        <tr><td>1129.0</td><td>1,519</td><td>0.001034</td></tr>
+        <tr><td>1129.0</td><td>1,519</td><td>0.001034</td></tr>
+        <tr><td>1151.0</td><td>4,004</td><td>0.002725</td></tr>
+        <tr><td>1153.0</td><td>8,428</td><td>0.005737</td></tr>
+        <tr><td>1154.0</td><td>2,329</td><td>0.001585</td></tr>
+        <tr><td>1204.0</td><td>1,988</td><td>0.001353</td></tr>
+        <tr><td>1204.0</td><td>1,988</td><td>0.001353</td></tr>
+        <tr><td>1212.0</td><td>2,021</td><td>0.001376</td></tr>
+        <tr><td>1231.0</td><td>10,653</td><td>0.007251</td></tr>
+        <tr><td>1243.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>1243.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>1243.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>1324.0</td><td>1,320</td><td>0.000898</td></tr>
+        <tr><td>1333.0</td><td>764</td><td>0.000520</td></tr>
+        <tr><td>1359.0</td><td>1,468</td><td>0.000999</td></tr>
+        <tr><td>1374.0</td><td>1,140</td><td>0.000776</td></tr>
+        <tr><td>1378.0</td><td>607</td><td>0.000413</td></tr>
+        <tr><td>1394.0</td><td>952</td><td>0.000648</td></tr>
+        <tr><td>1414.0</td><td>1,272</td><td>0.000866</td></tr>
+        <tr><td>1438.0</td><td>1,064</td><td>0.000724</td></tr>
+        <tr><td>1477.0</td><td>797</td><td>0.000543</td></tr>
+        <tr><td>1484.0</td><td>2,828</td><td>0.001925</td></tr>
+        <tr><td>1489.0</td><td>758</td><td>0.000516</td></tr>
+        <tr><td>1607.0</td><td>683</td><td>0.000465</td></tr>
+        <tr><td>1688.0</td><td>822</td><td>0.000560</td></tr>
+        <tr><td>1738.0</td><td>2,290</td><td>0.001559</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 50</li>
+        <li><strong>Secciones Únicas</strong>: 45</li>
+        <li><strong>Total Ponderado</strong>: 0.068337</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Ismael Burgueño</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>796.0</td><td>1,125</td><td>0.000766</td></tr>
+        <tr><td>796.0</td><td>1,125</td><td>0.000766</td></tr>
+        <tr><td>797.0</td><td>2,202</td><td>0.001499</td></tr>
+        <tr><td>816.0</td><td>776</td><td>0.000528</td></tr>
+        <tr><td>871.0</td><td>843</td><td>0.000574</td></tr>
+        <tr><td>886.0</td><td>1,001</td><td>0.000681</td></tr>
+        <tr><td>942.0</td><td>1,968</td><td>0.001340</td></tr>
+        <tr><td>998.0</td><td>1,178</td><td>0.000802</td></tr>
+        <tr><td>1071.0</td><td>1,620</td><td>0.001103</td></tr>
+        <tr><td>1082.0</td><td>907</td><td>0.000617</td></tr>
+        <tr><td>1087.0</td><td>761</td><td>0.000518</td></tr>
+        <tr><td>1128.0</td><td>5,468</td><td>0.003722</td></tr>
+        <tr><td>1135.0</td><td>1,517</td><td>0.001033</td></tr>
+        <tr><td>1254.0</td><td>2,217</td><td>0.001509</td></tr>
+        <tr><td>1287.0</td><td>2,892</td><td>0.001969</td></tr>
+        <tr><td>1307.0</td><td>797</td><td>0.000543</td></tr>
+        <tr><td>1489.0</td><td>758</td><td>0.000516</td></tr>
+        <tr><td>1489.0</td><td>758</td><td>0.000516</td></tr>
+        <tr><td>1505.0</td><td>1,061</td><td>0.000722</td></tr>
+        <tr><td>1525.0</td><td>1,322</td><td>0.000900</td></tr>
+        <tr><td>2009.0</td><td>868</td><td>0.000591</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 21</li>
+        <li><strong>Secciones Únicas</strong>: 19</li>
+        <li><strong>Total Ponderado</strong>: 0.021213</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: 29</li>
+        <li><strong>Total Ponderado Neto</strong>: 0.047124</li>
+    </ul>
+    <hr>
+
+    <h3 id="par5">Par 5: Julieta Ramírez vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Julieta Ramírez</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>741.0</td><td>1,293</td><td>0.000880</td></tr>
+        <tr><td>741.0</td><td>1,293</td><td>0.000880</td></tr>
+        <tr><td>800.0</td><td>1,787</td><td>0.001216</td></tr>
+        <tr><td>831.0</td><td>2,156</td><td>0.001468</td></tr>
+        <tr><td>839.0</td><td>783</td><td>0.000533</td></tr>
+        <tr><td>886.0</td><td>1,001</td><td>0.000681</td></tr>
+        <tr><td>902.0</td><td>1,377</td><td>0.000937</td></tr>
+        <tr><td>1119.0</td><td>3,634</td><td>0.002474</td></tr>
+        <tr><td>1125.0</td><td>8,839</td><td>0.006017</td></tr>
+        <tr><td>1143.0</td><td>3,373</td><td>0.002296</td></tr>
+        <tr><td>1158.0</td><td>3,447</td><td>0.002346</td></tr>
+        <tr><td>1171.0</td><td>2,674</td><td>0.001820</td></tr>
+        <tr><td>1193.0</td><td>1,203</td><td>0.000819</td></tr>
+        <tr><td>1248.0</td><td>1,264</td><td>0.000860</td></tr>
+        <tr><td>1276.0</td><td>2,584</td><td>0.001759</td></tr>
+        <tr><td>1325.0</td><td>936</td><td>0.000637</td></tr>
+        <tr><td>1336.0</td><td>6,100</td><td>0.004152</td></tr>
+        <tr><td>1359.0</td><td>1,468</td><td>0.000999</td></tr>
+        <tr><td>1425.0</td><td>1,499</td><td>0.001020</td></tr>
+        <tr><td>1434.0</td><td>1,488</td><td>0.001013</td></tr>
+        <tr><td>1477.0</td><td>797</td><td>0.000543</td></tr>
+        <tr><td>1483.0</td><td>825</td><td>0.000562</td></tr>
+        <tr><td>1761.0</td><td>913</td><td>0.000621</td></tr>
+        <tr><td>1769.0</td><td>567</td><td>0.000386</td></tr>
+        <tr><td>2016.0</td><td>2,027</td><td>0.001380</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 25</li>
+        <li><strong>Secciones Únicas</strong>: 24</li>
+        <li><strong>Total Ponderado</strong>: 0.036299</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Julieta Ramírez</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>951.0</td><td>1,210</td><td>0.000824</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 1</li>
+        <li><strong>Secciones Únicas</strong>: 1</li>
+        <li><strong>Total Ponderado</strong>: 0.000824</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: 24</li>
+        <li><strong>Total Ponderado Neto</strong>: 0.035476</li>
+    </ul>
+    <hr>
+
+    <h3 id="par7">Par 7: Gilberto Herrera vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Gilberto Herrera</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>796.0</td><td>1,125</td><td>0.000766</td></tr>
+        <tr><td>930.0</td><td>1,823</td><td>0.001241</td></tr>
+        <tr><td>997.0</td><td>527</td><td>0.000359</td></tr>
+        <tr><td>1100.0</td><td>1,602</td><td>0.001090</td></tr>
+        <tr><td>1121.0</td><td>1,765</td><td>0.001201</td></tr>
+        <tr><td>1155.0</td><td>4,017</td><td>0.002734</td></tr>
+        <tr><td>1303.0</td><td>1,097</td><td>0.000747</td></tr>
+        <tr><td>1325.0</td><td>936</td><td>0.000637</td></tr>
+        <tr><td>1387.0</td><td>1,082</td><td>0.000736</td></tr>
+        <tr><td>1489.0</td><td>758</td><td>0.000516</td></tr>
+        <tr><td>1538.0</td><td>944</td><td>0.000643</td></tr>
+        <tr><td>1544.0</td><td>731</td><td>0.000498</td></tr>
+        <tr><td>2001.0</td><td>1,747</td><td>0.001189</td></tr>
+        <tr><td>2039.0</td><td>1,306</td><td>0.000889</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 14</li>
+        <li><strong>Secciones Únicas</strong>: 14</li>
+        <li><strong>Total Ponderado</strong>: 0.013246</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Gilberto Herrera</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>831.0</td><td>2,156</td><td>0.001468</td></tr>
+        <tr><td>1359.0</td><td>1,468</td><td>0.000999</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 2</li>
+        <li><strong>Secciones Únicas</strong>: 2</li>
+        <li><strong>Total Ponderado</strong>: 0.002467</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: 12</li>
+        <li><strong>Total Ponderado Neto</strong>: 0.010779</li>
+    </ul>
+    <hr>
+
+    <h3 id="par8">Par 8: Monserrat Caballero vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Monserrat Caballero</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>808.0</td><td>1,120</td><td>0.000762</td></tr>
+        <tr><td>816.0</td><td>776</td><td>0.000528</td></tr>
+        <tr><td>831.0</td><td>2,156</td><td>0.001468</td></tr>
+        <tr><td>843.0</td><td>4,605</td><td>0.003135</td></tr>
+        <tr><td>854.0</td><td>5,403</td><td>0.003678</td></tr>
+        <tr><td>854.0</td><td>5,403</td><td>0.003678</td></tr>
+        <tr><td>858.0</td><td>8,539</td><td>0.005812</td></tr>
+        <tr><td>871.0</td><td>843</td><td>0.000574</td></tr>
+        <tr><td>922.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>947.0</td><td>1,229</td><td>0.000837</td></tr>
+        <tr><td>957.0</td><td>1,623</td><td>0.1.105</td></tr>
+        <tr><td>962.0</td><td>1,231</td><td>0.000838</td></tr>
+        <tr><td>1001.0</td><td>1,549</td><td>0.001054</td></tr>
+        <tr><td>1046.0</td><td>899</td><td>0.000612</td></tr>
+        <tr><td>1100.0</td><td>1,602</td><td>0.001090</td></tr>
+        <tr><td>1102.0</td><td>1,347</td><td>0.000917</td></tr>
+        <tr><td>1138.0</td><td>1,665</td><td>0.001133</td></tr>
+        <tr><td>1169.0</td><td>3,591</td><td>0.002444</td></tr>
+        <tr><td>1175.0</td><td>3,533</td><td>0.002405</td></tr>
+        <tr><td>1244.0</td><td>2,369</td><td>0.001613</td></tr>
+        <tr><td>1248.0</td><td>1,264</td><td>0.000860</td></tr>
+        <tr><td>1254.0</td><td>2,217</td><td>0.001509</td></tr>
+        <tr><td>1392.0</td><td>819</td><td>0.000557</td></tr>
+        <tr><td>1595.0</td><td>1,059</td><td>0.000721</td></tr>
+        <tr><td>1764.0</td><td>720</td><td>0.000490</td></tr>
+        <tr><td>1790.0</td><td>2,332</td><td>0.001587</td></tr>
+        <tr><td>1800.0</td><td>4,651</td><td>0.003166</td></tr>
+        <tr><td>1898.0</td><td>683</td><td>0.000465</td></tr>
+        <tr><td>2009.0</td><td>868</td><td>0.000591</td></tr>
+        <tr><td>2039.0</td><td>1,306</td><td>0.000889</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 30</li>
+        <li><strong>Secciones Únicas</strong>: 29</li>
+        <li><strong>Total Ponderado</strong>: 0.045196</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Monserrat Caballero</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>808.0</td><td>1,120</td><td>0.000762</td></tr>
+        <tr><td>834.0</td><td>1,665</td><td>0.001133</td></tr>
+        <tr><td>843.0</td><td>4,605</td><td>0.003135</td></tr>
+        <tr><td>916.0</td><td>873</td><td>0.000594</td></tr>
+        <tr><td>930.0</td><td>1,823</td><td>0.001241</td></tr>
+        <tr><td>953.0</td><td>1,027</td><td>0.000699</td></tr>
+        <tr><td>959.0</td><td>919</td><td>0.000626</td></tr>
+        <tr><td>985.0</td><td>1,099</td><td>0.000748</td></tr>
+        <tr><td>1058.0</td><td>1,307</td><td>0.000890</td></tr>
+        <tr><td>1071.0</td><td>1,620</td><td>0.001103</td></tr>
+        <tr><td>1072.0</td><td>1,188</td><td>0.000809</td></tr>
+        <tr><td>1095.0</td><td>1,412</td><td>0.000961</td></tr>
+        <tr><td>1105.0</td><td>1,274</td><td>0.000867</td></tr>
+        <tr><td>1119.0</td><td>3,634</td><td>0.002474</td></tr>
+        <tr><td>1121.0</td><td>1,765</td><td>0.001201</td></tr>
+        <tr><td>1129.0</td><td>1,519</td><td>0.001034</td></tr>
+        <tr><td>1129.0</td><td>1,519</td><td>0.001034</td></tr>
+        <tr><td>1204.0</td><td>1,988</td><td>0.001353</td></tr>
+        <tr><td>1243.0</td><td>996</td><td>0.000678</td></tr>
+        <tr><td>1324.0</td><td>1,320</td><td>0.000898</td></tr>
+        <tr><td>1336.0</td><td>6,100</td><td>0.004152</td></tr>
+        <tr><td>1392.0</td><td>819</td><td>0.000557</td></tr>
+        <tr><td>1394.0</td><td>952</td><td>0.000648</td></tr>
+        <tr><td>1469.0</td><td>798</td><td>0.000543</td></tr>
+        <tr><td>1484.0</td><td>2,828</td><td>0.001925</td></tr>
+        <tr><td>1607.0</td><td>683</td><td>0.000465</td></tr>
+        <tr><td>1688.0</td><td>822</td><td>0.000560</td></tr>
+        <tr><td>1874.0</td><td>525</td><td>0.000357</td></tr>
+        <tr><td>2003.0</td><td>2,104</td><td>0.001432</td></tr>
+        <tr><td>2016.0</td><td>2,027</td><td>0.001380</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 30</li>
+        <li><strong>Secciones Únicas</strong>: 29</li>
+        <li><strong>Total Ponderado</strong>: 0.034259</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: 0</li>
+        <li><strong>Total Ponderado Neto</strong>: 0.010936</li>
+    </ul>
+    <hr>
+
+    <h3 id="par9">Par 9: Norma Bustamante vs. Rechazo</h3>
+    <h4>Entrevistas de Apoyo a Norma Bustamante</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>942.0</td><td>1,968</td><td>0.001340</td></tr>
+        <tr><td>1028.0</td><td>801</td><td>0.000545</td></tr>
+        <tr><td>1160.0</td><td>1,319</td><td>0.000898</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 3</li>
+        <li><strong>Secciones Únicas</strong>: 3</li>
+        <li><strong>Total Ponderado</strong>: 0.002783</li>
+    </ul>
+    <h4>Entrevistas de Rechazo a Norma Bustamante</h4>
+    <table>
+        <tr><th>Sección</th><th>Lista Nominal</th><th>Peso</th></tr>
+        <tr><td>834.0</td><td>1,665</td><td>0.001133</td></tr>
+        <tr><td>854.0</td><td>5,403</td><td>0.003678</td></tr>
+        <tr><td>854.0</td><td>5,403</td><td>0.003678</td></tr>
+        <tr><td>1074.0</td><td>1,188</td><td>0.000809</td></tr>
+        <tr><td>1109.0</td><td>1,290</td><td>0.000878</td></tr>
+        <tr><td>1631.0</td><td>1,223</td><td>0.000832</td></tr>
+        <tr><td>1632.0</td><td>1,834</td><td>0.001248</td></tr>
+        <tr><td>2059.0</td><td>1,250</td><td>0.000851</td></tr>
+    </table>
+    <ul>
+        <li><strong>Total de Entrevistas</strong>: 8</li>
+        <li><strong>Secciones Únicas</strong>: 7</li>
+        <li><strong>Total Ponderado</strong>: 0.013107</li>
+    </ul>
+    <h4>Consolidación</h4>
+    <ul>
+        <li><strong>Total de Entrevistas Neto</strong>: -5</li>
+        <li><strong>Total Ponderado Neto</strong>: -0.010325</li>
+    </ul>
+    <hr>
+
+    <div class="map-links">
+        <h2 id="mapas">Mapas por Candidato/Categoría</h2>
+        <ul>
+            <li><a href="mapa_Armando_Ayala.html">Mapa de Secciones: Armando Ayala</a></li>
+            <li><a href="mapa_Carlos_Torres.html">Mapa de Secciones: Carlos Torres</a></li>
+            <li><a href="mapa_Evangelina_Moreno.html">Mapa de Secciones: Evangelina Moreno</a></li>
+            <li><a href="mapa_Alejandro_Ruiz.html">Mapa de Secciones: Alejandro Ruiz</a></li>
+            <li><a href="mapa_Ismael_Burgueno.html">Mapa de Secciones: Ismael Burgueño</a></li>
+            <li><a href="mapa_Julieta_Ramirez.html">Mapa de Secciones: Julieta Ramírez</a></li>
+            <li><a href="mapa_Gilberto_Herrera.html">Mapa de Secciones: Gilberto Herrera</a></li>
+            <li><a href="mapa_Monserrat_Caballero.html">Mapa de Secciones: Monserrat Caballero</a></li>
+            <li><a href="mapa_Norma_Bustamante.html">Mapa de Secciones: Norma Bustamante</a></li>
+            <li><a href="mapa_Fernando_Castro.html">Mapa de Secciones: Fernando Castro</a></li>
+            <li><a href="mapa_Empty Voto_Ninguno.html">Mapa de Secciones: Empty Voto/Ninguno</a></li>
+        </ul>
+    </div>
+</body>
+</html>
